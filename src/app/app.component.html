@@ -3,8 +3,10 @@
         <ul class="nav navbar-nav">
         <!-- <li class="active"><a routerLink="appComponent" routerLinkActive="active"><span style="color: white;">Index</span></a></li> -->
         <li class="active"><a routerLink="movie" routerLinkActive="active"><span style="color: white;">Movie</span></a></li>
-        <li class="active"><a routerLink="adminMovie" routerLinkActive="active"><span style="color: white;">Create movie</span></a></li>
-        <li class="active"><a routerLink="adminMovie" routerLinkActive="active"><span style="color: white;">Log in</span></a></li>
+        <li class="active"><a routerLink="adminMovie" routerLinkActive="active"><span style="color: white;">Search movie</span></a></li>
+        <li *ngIf="user == null" class="active"><a routerLink="user" routerLinkActive="active"><span style="color: white;">Sign in</span></a></li>
+        <li *ngIf="user != null" class="active"><a routerLink="profile" routerLinkActive="active"><span style="color: white;">Profile</span></a></li>
+        <li *ngIf="user != null" (click)="signOut()" class="active"><a routerLink="movie" routerLinkActive="active"><span style="color: white;">Sign Out</span></a></li>
         </ul>
     </div>
 </nav>

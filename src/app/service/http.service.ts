@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Genre } from '../model/Genre'
 import { Movie } from '../model/Movie'
+import { User } from '../model/User'
 import { Show } from '../model/Show';
 
 const httpOptions = {
@@ -53,4 +54,7 @@ export class HttpService {
         return this.http.get<Show[]>(`${this.urlStart}show/movie/${movieId}`);
     }
 
+    getAutenticationUser(username: string, password: string):Observable<User>{
+        return this.http.get<User>(`${this.urlStart}user/search?username=${username}&password=${password}`)
+    }
 }

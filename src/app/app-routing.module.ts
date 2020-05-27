@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieDescriptionComponent } from './components/movie-description/movie-description.component';
 import { ShowDescriptionComponent } from './components/show-description/show-description.component';
+import { UserComponent } from './components/user/user.component';
+import { UserDescriptionComponent } from './components/user-description/user-description.component';
 
 
 const routes: Routes = [
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:"adminMovie", component:AdminMovieComponent},
   {path:"movie", component:MovieComponent},
   {path:"movie/:id", component:MovieDescriptionComponent},
-  {path:"show/:id", component:ShowDescriptionComponent}
+  {path:"show/:id", component:ShowDescriptionComponent},
+  {path:"user", component:UserComponent},
+  {path:"profile", component:UserDescriptionComponent}
 ];
 
 @NgModule({

@@ -20,20 +20,16 @@ export class AdminMovieComponent implements OnInit {
   searchMovies(){
     this.service.searchMovie(this.movie.title).subscribe(
       (movie) => {this.movie = movie 
-        console.log(this.movie.title)
       }
     )
-    console.log("SearchMovie")
   }
 
   updateMovie(){
     this.service.updateMovie(1).subscribe(
-
     )
   }
 
   createMovie(){
     alert("test")
   }
-
 }

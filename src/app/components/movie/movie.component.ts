@@ -3,6 +3,7 @@ import { Movie } from 'src/app/model/Movie';
 import { Genre } from 'src/app/model/Genre';
 import { HttpService } from 'src/app/service/http.service';
 import { Router } from '@angular/router'
+import { User } from 'src/app/model/User';
 
 @Component({
   selector: 'app-movie',
@@ -26,12 +27,16 @@ export class MovieComponent implements OnInit {
   movies : Movie[];
   genres : Genre[];
 
+  public user : User;
+
   constructor(private service:HttpService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getMovies().subscribe(arg => this.movies = arg);
 
     this.movies = [];
+
+    this.user = JSON.parse(localStorage.getItem('User'));
   }
 
   onSelect(movieId: any) {
