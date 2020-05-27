@@ -1,0 +1,14 @@
+#body {  
+    position: relative;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.movie {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.test {
+    font-size: 14px;
+}

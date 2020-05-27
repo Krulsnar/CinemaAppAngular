@@ -1,0 +1,13 @@
+<div id="body">
+    <div class="movie" *ngIf="movie != null"><h1>{{movie.title}}</h1>
+        <div class="genre"><h2>Releasedate: {{datepipe.transform(movie.releaseDate)}}</h2></div>
+        <div>
+            <p class="lead">Genre: {{movie.genre}}</p>
+            <p class="lead">Runtime: {{convertTime(movie.runtime)}}</p>
+            <p class="lead">{{movie.description}}</p>
+        <p class="lead">Choose show: </p>
+    </div>
+    
+    <app-show></app-show>
+    </div>
+</div>

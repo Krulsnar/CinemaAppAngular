@@ -1,0 +1,11 @@
+<form (ngSubmit)="addMovie()">
+    <!-- <label>Title</label><input type="text" [(ngModel)]="title" placeholder="add title"> -->
+</form>
+
+<div class="flex">
+    <div class="container" *ngFor="let movieObject of movies">
+        <a (click)="onSelect(movieObject.movieId)"><h1 class="Display-1">{{movieObject.title}}</h1></a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

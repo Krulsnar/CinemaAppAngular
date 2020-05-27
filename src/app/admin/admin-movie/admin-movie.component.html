@@ -1,0 +1,26 @@
+<div style="margin-left: 50px;">
+    <div class="input-group mb-3" style="margin-bottom: 20px;">
+        <label for="">Title</label>
+        <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" [(ngModel)]="movie.title">
+    </div>
+
+    <div class="input-group mb-3" style="margin-bottom: 20px;">
+        <label for="">Description</label>
+        <input type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="basic-addon1" [(ngModel)]="movie.description">
+    </div> 
+
+    <div class="input-group mb-3" style="margin-bottom: 20px;">
+        <label for="">Runtime</label>
+        <input style="width:100%" type="text" class="form-control" placeholder="Runtime" aria-label="Runtime" [(ngModel)]="movie.runtime">
+    </div>
+
+    <div class="input-group mb-3" style="margin-bottom: 20px;">
+        <label style="width:auto" for="">Release date</label>
+        <input type="text" class="form-control" placeholder="Release date" aria-label="Release date" [(ngModel)]="movie.releaseDate">
+    </div>
+
+    <button type="button" class="btn btn-secondary" style="margin-right: 4px;" (click)="searchMovies()">Search</button>
+    <button type="button" class="btn btn-secondary" style="margin-right: 4px;" (click)="createMovie()">Create</button>
+    <button type="button" class="btn btn-secondary" style="margin-right: 4px;" (click)="updateMovie()">Update</button>
+    <button type="button" class="btn btn-secondary" style="margin-right: 4px;">Delete</button>
+</div>
