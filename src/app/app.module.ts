@@ -13,6 +13,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { AdminMovieComponent } from './admin/admin-movie/admin-movie.component';
 import { MovieDescriptionComponent } from './components/movie-description/movie-description.component';
 import { ShowComponent } from './components/show/show.component';
+import { ShowDescriptionComponent } from './components/show-description/show-description.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShowComponent } from './components/show/show.component';
     MovieComponent,
     AdminMovieComponent,
     MovieDescriptionComponent,
-    ShowComponent
+    ShowComponent,
+    ShowDescriptionComponent
   ],
   imports: [
     BrowserModule,

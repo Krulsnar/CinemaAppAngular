@@ -1,5 +1,5 @@
 <div class="flex">
     <div *ngFor="let showObj of show">
-        <button type="button" class="btn btn-secondary" id="buttons">{{showObj.showTime | date}}</button>
+        <button (click)="onSelect(showObj.showId)" type="button" class="btn btn-secondary" id="buttons">{{showObj.showTime | date}}</button>
     </div>
 </div>
